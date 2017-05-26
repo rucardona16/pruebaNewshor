@@ -1,0 +1,24 @@
+@media screen and (max-width: 1200px ) {
+    //here the import for exaple
+}
+
+@media screen and (max-width: 992px ) {
+    //here the import for exaple
+}
+
+@media screen and (max-width: 768px ) {
+    @import "components/header/_media_768.scss";
+    @import "features/home/_media_768.scss";
+    @import "components/footer/_media_768.scss";
+}
+
+@media screen and (max-width: 540px ) {
+    @import "components/header/_media_540.scss";
+    @import "features/home/_media_540.scss";
+    @import "components/footer/_media_540.scss";
+}
+
+@media screen and (max-width: 320px ) {
+    //here the import for exaple
+}
+

@@ -1,0 +1,11 @@
+<section>
+    <h1>{{home.clients}}</h1>
+    <ng-file-input mode="text" callback="home.readRegistrado(file)"></ng-file-input>
+    <ng-file-input mode="text" callback="home.readContenido(file)"></ng-file-input>
+
+    <div>
+        <a href="" ng-click="home.download(home.val.text)">
+            Download
+        </a>
+    </div>
+</section>

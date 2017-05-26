@@ -1,0 +1,23 @@
+<header class="header">
+	<div ng-click="headerCtrl.menu = !headerCtrl.menu; headerCtrl.menuClass()" class="div-hamburguesa">
+		<img src="img/menu-hamburguesa.png" alt="iothings">
+	</div>
+	<div class="div-logo">
+		<a href="#/"><img src="img/logo-things.png" alt="iothings"></a>	
+	</div>
+	<!--<div ng-class="headerCtrl.menu ? 'menu-open' : 'menu-close'" class="div-menu">
+		<nav>
+			<a id="item-menu-inicio" ng-click="headerCtrl.menu = !headerCtrl.menu; "  href="#/">INICIO</a>
+			<a id="item-menu-commerce" ng-click="headerCtrl.menu = !headerCtrl.menu; " href="#/commerce">BOTONES HABILITADOS</a>
+			<a id="item-menu-sos" ng-click="headerCtrl.menu = !headerCtrl.menu" href="">PEDIDOS</a>
+			<a id="item-menu-asistencia" ng-click="headerCtrl.menu = !headerCtrl.menu" href="">BOTON ASISTENCIA</a>
+			<a id="item-menu-energy" ng-click="headerCtrl.menu = !headerCtrl.menu" href="">IOT ENERGY</a>
+			<a id="item-menu-markethings" ng-click="headerCtrl.menu = !headerCtrl.menu" href="">MARKETHINGS</a>
+		</nav>
+	</div>-->
+	<div ng-class="headerCtrl.menu ? 'menu-open' : 'menu-close'" class="div-menu">
+		<nav class="menu-login">
+			<a id="item-menu-inicio" ng-click="headerCtrl.menu = !headerCtrl.menu; "  href="#/login">Entrar</a>
+		</nav>
+	</div>
+</header>

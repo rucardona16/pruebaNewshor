@@ -1,0 +1,26 @@
+
+// Include global imports
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
+@import 'https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css';
+
+
+// include general sass
+@import "general/normalize";
+@import "general/fonts";
+@import "general/variables";
+
+/* inject:imports */
+@import "lib/_sweetalert.scss";
+@import "components/footer/_footer.scss";
+@import "components/header/_header.scss";
+@import "features/home/_home.scss";
+/* endinject */
+
+// bower:scss
+@import "../_dev/lib/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// include mediaquerys
+@import "general/mediaquerys";
+
+

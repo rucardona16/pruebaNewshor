@@ -1,0 +1,35 @@
+<section class="section-button">
+    <div class="table-button">
+        <table st-persist st-table="button.displayedCollection" st-safe-src="button.displayed" class="table table-striped">
+            <thead>
+                <tr>
+                    <th st-sort="device_mac">Id dispositivo</th>
+                    <th st-sort="active">Estado</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th colspan="1">
+                        <input st-search="device_mac" placeholder="Buscar por id" class="input-sm form-control" type="search" />
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in button.displayedCollection">
+                    <td>{{row.device_mac}}</td>
+                    <td>{{row.active}}</td>
+                    <td>
+                        <nz-toggle on-toggle="button.switchChange(row)" tri-toggle ng-model="row.switch"></nz-toggle>
+                        <!--<i ng-click="button.showModal(row)" class="material-icons">mode_edit</i>-->
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5" class="text-center">
+                        <div st-items-by-page="8" st-pagination=""></div>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</section>

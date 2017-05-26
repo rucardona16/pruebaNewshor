@@ -1,0 +1,52 @@
+<md-dialog-content>
+    <div ng-show="!showSpiner" class="divFormPrdoduct">   
+        <form name="productForm" class="formModalProduct">
+            <md-input-container class="inputFormPrdoduct">
+                <label>Nombre</label>
+                <input required="" name="name" ng-model="vmP.product.name">
+                <div ng-messages="productForm.name.$error">
+                    <div ng-message="required">Campo obligatorio.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="inputFormPrdoduct">
+                <label>Referencia</label>
+                <input required="" name="reference" ng-model="vmP.product.reference">
+                <div ng-messages="productForm.reference.$error">
+                    <div ng-message="required">Campo obligatorio.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="inputFormPrdoduct">
+                <label>Categoria</label>
+                <input ng-disabled="disable" required name="category" ng-model="vmP.product.category">
+                <div ng-messages="productForm.category.$error">
+                    <div ng-message="required">Campo obligatorio.</div>
+                </div>
+            </md-input-container>
+            <md-input-container class="inputFormPrdoduct">
+                <label>Precio</label>
+                <input required="" name="price" ng-pattern="vmP.integerval" ng-model="vmP.product.price">
+                <div ng-messages="productForm.price.$error">
+                    <!--<div ng-message="required">Campo obligatorio.</div>-->
+                    <div ng-show="!productForm.price.$valid">Campo numerico.</div>
+                </div>
+                <!--<div ng-show="!productForm.price.$valid">Campo numerico.</div>-->
+            </md-input-container>
+        </form>
+        <div class="inputFile">
+            <label for="file">Seleccione una imagen</label>
+            <input id="file" type="file" ng-change="vmP.change()" ng-model="vmP.imagen" name="file" base-sixty-four-input do-not-parse-if-oversize required onerror="vmP.onLoad" maxsize="25" accept="image/*">
+            <!--<img src="data:{{vmP.imagen.filetype}};base64,{{vmP.imagen.base64}}" alt="">-->
+            <img ng-src="{{vmP.Img}}" alt="">
+        </div>
+        <div class="divModalBtn">
+            <i ng-show="!productForm.$valid || !vmP.validImagen" class="material-icons doneBtn">done</i>
+            <i ng-show="productForm.$valid && vmP.validImagen" ng-click="vmP.addProduct()" class="material-icons">done</i>
+            <i ng-click="vmP.cancelBtn()" class="material-icons">cancel</i>
+        </div>
+    </div>
+    <div class="spinerModal" ng-show="showSpiner">
+        <md-progress-circular class="spiner" md-mode="indeterminate" md-diameter="50">
+        </md-progress-circular>
+        <span>Cargando!</span>
+    </div>
+</md-dialog-content>

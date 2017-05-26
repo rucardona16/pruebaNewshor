@@ -1,0 +1,12 @@
+/node_modules
+node_modules
+/bower_components
+bower_components
+/_dev/css/
+/_dev/lib/
+.DS_Store.orig
+.DS_Store
+_dev/css/main.css
+_dev/scss/main.scss
+dist
+dist/

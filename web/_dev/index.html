@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ES" ng-app="glanz">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Prueba newshord </title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- build:css css/glanz.min.css -->
+	<!-- inject:css -->
+	<link rel="stylesheet" href="css/main.min.css">
+	<!-- endinject -->
+	<!-- endbower -->
+	<!-- endinject -->
+	<!-- endbuild -->
+</head>
+<body>
+    <header-home></header-home>
+	<div ui-view></div>
+    <footer-home></footer-home>
+    
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy6BJy_LJx5XEE26aMD-XhrRN523hRxtw"></script>
+	<!-- build:js app/vendor.min.js -->
+	<!-- bower:js -->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angularjs/angular.js"></script>
+	<script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="lib/jquery/dist/jquery.js"></script>
+	<script src="lib/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+	<script src="lib/simple-angular-file-input/dist/angular-file-input.min.js"></script>
+	<script src="lib/blob-polyfill/Blob.js"></script>
+	<script src="lib/file-saver.js/FileSaver.js"></script>
+	<script src="lib/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js app/glanz.min.js -->
+	<!-- inject:js -->
+
+	<script src="app/features/home/home.module.js"></script>
+
+	<script src="app/features/home/home.services.js"></script>
+
+	<script src="app/features/home/home.controller.js"></script>
+
+	<script src="app/app.module.js"></script>
+
+	<script src="app/cross/cross.utilities.js"></script>
+
+	<script src="app/cross/cross.constant.js"></script>
+
+	<script src="app/app.routes.js"></script>
+
+	<script src="app/app.config.js"></script>
+
+	<!-- endinject -->
+	<!-- endbuild -->
+
+</body>
+</html>

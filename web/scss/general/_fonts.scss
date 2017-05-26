@@ -1,0 +1,18 @@
+@mixin newFont($fontFamily,$fileName){
+    $path: '../www/fonts/' + $fileName+ '/'+ $fileName;
+
+    @font-face {
+        font-family: $fontFamily;
+        src: url($path + '.eot');
+        src: url($path +'.eot?#iefix') format('embedded-opentype'),
+             url($path +'.woff') format('woff'),
+             url($path +'.ttf') format('truetype'),
+             url($path +'.svg#'+$fontFamily) format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+//@import 'https://fonts.googleapis.com/css?family=Roboto:300,400'
+//@include newFont('AmaticBold','amatic-bold-webfont');
